@@ -6,13 +6,13 @@ from streamlit_chat import message
 
 # Open API key
 
-openai.api_key = st.secrets["OPEN_API_KEY"]
+openai.api_key = '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' #st.secrets["OPEN_API_KEY"]
 
 # Generating responses from the api
 
 def generate_response(prompt):
     completions = openai.Completion.create(
-        engine = "text-davinci-003",
+        engine = "gpt-3.5-turbo",
         prompt = prompt,
         max_tokens = 1024,
         n=1,
